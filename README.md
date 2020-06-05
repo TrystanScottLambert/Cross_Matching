@@ -52,7 +52,7 @@ idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(ra_
                                             ra_cat,dec_cat,vel_cat,on_sky_lim,los_lim,frame='Spherical')
 
 
-#### Galactic Example
+### Galactic Example
 The code below will cross match c = (l_c,b_c,dist_c) to catalog = (l_cat,b_cat,dist_cat) with a 30 arcsecond onsky limit and a 10 Mpc line of sight limit 
 
 import Cross_Match as cm 
