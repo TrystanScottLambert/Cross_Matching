@@ -55,7 +55,7 @@ import Cross_Match as cm
 on_sky_lim = 2
 los_lim = 200
 
-idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(ra_c,dec_c,vel_c,ra_cat,dec_cat,vel_cat,on_sky_lim,los_lim,frame='Spherical')
+idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(ra_c,dec_c,vel_c,ra_cat,dec_cat,vel_cat,on_sky_lim,los_lim,frame='spherical')
 
 ```
 
@@ -68,7 +68,7 @@ import Cross_Match as cm
 on_sky_lim = 30/3600 # Have to convert into decimal degrees
 los_lim = 10
 
-idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(l_c,b_c,dist_c,l_cat,b_cat,dist_cat,on_sky_lim,los_lim,frame='Spherical')
+idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(l_c,b_c,dist_c,l_cat,b_cat,dist_cat,on_sky_lim,los_lim,frame='spherical')
 
 ```
 
