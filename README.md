@@ -34,6 +34,7 @@ The below will cross match c = (x_c,y_c,z_c) to catalog = (x_cat,y_cat,z_cat) wi
 import Cross_Match as cm
 
 xy_lim = 20
+
 z_lim = 200
 
 idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(x_c,y_c,z_c,x_cat,y_cat,z_cat,xy_lim,z_lim)
@@ -44,6 +45,7 @@ The code below will cross mathc c = (ra_c,dec_c,vel_c) to catalog = (ra_cat,dec_
 import Cross_Match as cm 
 
 on_sky_lim = 2
+
 los_lim = 200
 
 idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(ra_c,dec_c,vel_c,
@@ -56,6 +58,7 @@ The code below will cross match c = (l_c,b_c,dist_c) to catalog = (l_cat,b_cat,d
 import Cross_Match as cm 
 
 on_sky_lim = 30/3600 # Have to convert into decimal degrees
+
 los_lim = 4
 
 idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(l_c,b_c,dist_c,
