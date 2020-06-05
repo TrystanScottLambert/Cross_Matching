@@ -20,7 +20,7 @@ import astropy.units as u
 from astropy.coordinates import SkyCoord
 
 # Function to work out the xy cartesian distance. (only works for cartesian). 
-def radii_distance(x1,y1,x2,y2):
+def radii_distance(x1,x2,y1,y2):
 	return np.sqrt((x1-x2)**2+(y1-y2)**2)
 
 # Function to work out the distance between z1 and z2 (This works for both vel and/or z) 
