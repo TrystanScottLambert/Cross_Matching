@@ -37,7 +37,7 @@ The code below will cross match c = (x_c,y_c,z_c) to catalog = (x_cat,y_cat,z_ca
 
 ```
 
-import Cross_Match as cm
+import Cross_Matching.Cross_Match as cm
 
 xy_lim = 20
 z_lim = 200
@@ -50,7 +50,7 @@ idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(x_c
 The code below will cross match c = (ra_c,dec_c,vel_c) to catalog = (ra_cat,dec_cat,vel_cat) with a 2 degree on-sky limit and a 200 km/s line-of-sight limit
 
 ```
-import Cross_Match as cm 
+import Cross_Matching.Cross_Match as cm 
 
 on_sky_lim = 2
 los_lim = 200
@@ -63,7 +63,7 @@ idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(ra_
 The code below will cross match c = (l_c,b_c,dist_c) to catalog = (l_cat,b_cat,dist_cat) with a 30 arcsecond on-sky limit and a 10 Mpc line-of-sight limit 
 
 ```
-import Cross_Match as cm 
+import Cross_Matching.Cross_Match as cm 
 
 on_sky_lim = 30/3600 # Have to convert into decimal degrees
 los_lim = 10
@@ -74,14 +74,24 @@ idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(l_c
 
 ## Installation
 
+#### Git Clone Method 
 Download the repository through Git.
 
 `git clone https://github.com/TrystanScottLambert/Cross_Matching.git`
 
-## Execution
-This script can be downloaded and read in as one would a python package i.e. import Cross_Match as cm. Make sure that the Cross_Match.py script is in the same folder as the script you want to use. 
+This script can be downloaded and read in as one would a python package i.e. import Cross_Match as cm. Make sure that the Cross_Match.py script is in the same folder as the script you want to use. You may use this script in any fashion as you see fit.
 
-In the future this might be pip installable but this is currently not the case.
+#### pip install method
+
+Alternatively one could simply pip install the package using the python 3 version of pip
+
+` pip install Cross_Matching `
+
+It can then be run in scripts 
+
+` import Cross_Matching.Cross_Match as cm `
+
+## Execution
 
 The main function is Cross_match and is the one which should be used most often. This takes 2 sets of positional arrays and cross matches the first one into the other, returning a list of indicies matches in the 1st, indicies matches in the 2nd, indicies which couldn't find a match in the 1st, indicies which couldn't find a match in the 2nd, the on-sky offsets between the matches and the line-of-sight offsets between the matches. 
 
