@@ -1,4 +1,4 @@
-## Cross_Matching
+# Cross_Matching
 Function to Cross match astronomical catalogs in either cartesian, equitorial, or galactic coordinates with a preference on on-sky position
 
 Cross matching between two catalogues is a tricky excercise due to the fact that one cannot garantee bijectivity, that is to say that sources from one catalog may or may not have several acceptable matches in another catalog. The inate ambigious nature causes a lot of difficulty in the Astronomy community. This is compounded when one has to consider multiple dimensions that can be searched around and the pseudo random search criteria that need to be chosen by the user. 
@@ -28,16 +28,17 @@ idx2_nm = The positions of all the values in catalog which weren't found as matc
 d2d = The onsky difference for all the matches 
 d3d = The line of sight offset between all the matches
 
-# Cartesian Example
+### Cartesian Example
 The below will cross match c = (x_c,y_c,z_c) to catalog = (x_cat,y_cat,z_cat) with a 20 pixel on-sky limit and a 200 pixel line of sight limit
 
 import Cross_Match as cm
 
 xy_lim = 20
 z_lim = 200
+
 idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(x_c,y_c,z_c,x_cat,y_cat,z_cat,xy_lim,z_lim)
 
-# Equitorial Example
+### Equitorial Example
 The code below will cross mathc c = (ra_c,dec_c,vel_c) to catalog = (ra_cat,dec_cat,vel_cat) with a 2 degree onsky limit and a 200 km/s line of sight limit
 
 import Cross_Match as cm 
@@ -49,7 +50,7 @@ idx_c,idx_cat,idx_not_matches_c,idx_not_matches_cat,d2d,d3d = cm.Cross_match(ra_
                                             ra_cat,dec_cat,vel_cat,on_sky_lim,los_lim,frame='Spherical')
 
 
-# Galactic Example
+#### Galactic Example
 The code below will cross match c = (l_c,b_c,dist_c) to catalog = (l_cat,b_cat,dist_cat) with a 30 arcsecond onsky limit and a 10 Mpc line of sight limit 
 
 import Cross_Match as cm 
