@@ -71,7 +71,9 @@ Download the repository through Git.
 `git clone https://github.com/TrystanScottLambert/Cross_Matching.git`
 
 ## Execution
-This script can be downloaded and read in as one would a python package i.e. import Cross_Match as cm. From there the limited number of functions can be used
+This script can be downloaded and read in as one would a python package i.e. import Cross_Match as cm. From there the limited number of functions can be used. Just make sure that the Cross_Match.py script is in the same folder as the script you want to use. 
+
+In the future this might be pip installable but this is currently not the case.
 
 The main function is Cross_match and is the one which should be used most often. This takes 2 sets of positional arrays and cross matches the first one into the other returning a list of indicies matches in the 1st, indicies matches in the 2nd, indicies which couldn't find a match in the 1st, indicies which couldn't find a match in the 2nd, the on sky separation between the matches and the line of sight offesets between the matches. 
 `
