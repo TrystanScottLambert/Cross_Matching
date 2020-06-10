@@ -1,5 +1,5 @@
 #########################################
-#                    #
+#                                       #
 # Cross Matching function        #
 # Trystan Scott Lambert            #
 #                    #
@@ -20,7 +20,7 @@ from astropy.coordinates import SkyCoord
 
 # Function to work out the xy cartesian distance. (only works for cartesian). 
 def radii_distance(x1,x2,y1,y2):
-    return np.sqrt((x1-x2)**2+(y1-y2)**2)
+	return np.sqrt((x1-x2)**2+(y1-y2)**2)
 
 # Function to work out the distance between z1 and z2 (This works for both vel and/or z) 
 def los_distance(z1,z2):
@@ -74,10 +74,10 @@ def search_around_point(x,y,z,x_array,y_array,z_array,xy_lim,z_lim,frame='cartes
 
 #Function which will do the cross matching for an entire array
 def Cross_match(x1,y1,z1,x2,y2,z2,xy_lim,z_lim,frame='cartesian'):
-    # Error capturing to makes sure that the frame is correct. 
-    if frame != 'cartesian' and frame != 'spherical':  
-        print('Error: frame needs to be "cartesian" or "equitorial"')
-        return  #returning nothing like this will end the function right away
+	# Error capturing to makes sure that the frame is correct. 
+	if frame != 'cartesian' and frame != 'spherical':  
+		print('Error: frame needs to be "cartesian" or "equitorial"')
+		return  #returning nothing like this will end the function right away
 
     #lists which we will populate with values
     idx_1 = []    #this is the index for the x1,y1,z1 arrays
