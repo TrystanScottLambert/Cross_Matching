@@ -84,7 +84,6 @@ def Cross_match(x1,y1,z1,x2,y2,z2,xy_lim,z_lim,frame='cartesian'):
 	idx_2 = []    #this is the corresponding index for x2,y2,z2
 	d2d = []    #this is the on sky distances (either in cartesian units or degrees depending on frame choice)
 	d3d = []    #this is the line-of-sight distance which will be in whatever units the user points in
-	no_match_counter = 0 
 	one_match_counter = 0 
 	multi_match_counter = 0 
 	for i in range(len(x1)):
@@ -116,8 +115,8 @@ def Cross_match(x1,y1,z1,x2,y2,z2,xy_lim,z_lim,frame='cartesian'):
 	print('----------------------------------')
 	print('Cross matching done: \n')
 	print(f'{one_match_counter} sources with one match')
-	print(f'{multi_match_counter} sources with multiple matches')
-	print(f'{no_match_counter} sources with no matches')
+	print(f'{multi_match_counter} sources with multiple possible matches')
+	print(f'{len(idx_1_not_matches)} sources with no matches')
 	print('----------------------------------')
 	print('----------------------------------')
 	print('Bijectivity Results: \n')
