@@ -1,16 +1,16 @@
 #########################################
-#                                       #
-# Cross Matching function        #
-# Trystan Scott Lambert            #
-#                    #
-# Function which mimics the astropy    #
-# SkyCoord function but works for both    #
-# cartesian, equitorial, and galacitc    #
-#                    #
-# It is also much faster due to not    #
-# assigning units to any arrays        #
-# (except for some crash cases)        #
-#                    #
+#					#
+# Cross Matching function		#
+# Trystan Scott Lambert			#
+#					#
+# Function which mimics the astropy	#
+# SkyCoord function but works for both 	#
+# cartesian, equitorial, and galacitc	#
+#					#
+# It is also much faster due to not	#
+# assigning units to any arrays		#
+# (except for some crash cases)		#
+#					#
 #########################################
 
 
@@ -76,7 +76,7 @@ def search_around_point(x,y,z,x_array,y_array,z_array,xy_lim,z_lim,frame='cartes
 def Cross_match(x1,y1,z1,x2,y2,z2,xy_lim,z_lim,frame='cartesian'):
 	# Error capturing to makes sure that the frame is correct. 
 	if frame != 'cartesian' and frame != 'spherical':  
-		print('Error: frame needs to be "cartesian" or "equitorial"')
+		print('Error: frame needs to be "cartesian" or "spherical"')
 		return  #returning nothing like this will end the function right away
 
     #lists which we will populate with values
