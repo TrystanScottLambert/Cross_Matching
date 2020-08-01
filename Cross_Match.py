@@ -18,6 +18,7 @@ import numpy as np
 import astropy.units as u 
 from astropy.coordinates import SkyCoord
 import warnings
+warnings.filterwarnings('error')
 
 # Function to work out the xy cartesian distance. (only works for cartesian). 
 def radii_distance(x1,x2,y1,y2):
